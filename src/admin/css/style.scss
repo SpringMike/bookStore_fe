@@ -1,0 +1,448 @@
+// ------------------------------------ SideBar ------------------------------------
+
+.sidebar {
+  flex: 1;
+  border-right: 0.5px solid rgb(230, 227, 227);
+  min-height: 100vh;
+  background-color: white;
+
+  .top {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .logo {
+      font-size: 20px;
+      font-weight: bold;
+      color: #6439ff;
+    }
+  }
+
+  hr {
+    height: 0;
+    border: 0.5px solid rgb(230, 227, 227);
+  }
+
+  .center {
+    padding-left: 10px;
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      .title {
+        font-size: 10px;
+        font-weight: bold;
+        color: #999;
+        margin-top: 15px;
+        margin-bottom: 5px;
+      }
+
+      li {
+        display: flex;
+        align-items: center;
+        padding: 5px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #ece8ff;
+        }
+
+        .icon {
+          font-size: 18px;
+          color: #7451f8;
+        }
+
+        span{
+          font-size: 16px;
+          font-weight: 600;
+          color: #888;
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+
+  .bottom{
+    display: flex;
+    align-items: center;
+    margin: 10px;
+
+    //.colorOption{
+    //  width: 20px;
+    //  height: 20px;
+    //  border-radius: 5px;
+    //  border: 1px solid #7451f8;
+    //  cursor: pointer;
+    //  margin: 5px;
+    //
+    //  &:nth-child(1){
+    //    background-color: whitesmoke;
+    //  }
+    //  &:nth-child(2){
+    //    background-color: #333;
+    //  }
+    //  &:nth-child(3){
+    //    background-color: darkblue;
+    //  }
+    //}
+  }
+}
+
+
+// ------------------------------------ NavBar ------------------------------------
+
+.navbar {
+  height: 50px;
+  border-bottom: 0.5px solid rgb(231, 228, 228);
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #555;
+
+  .wrapper {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .search {
+      display: flex;
+      align-items: center;
+      border: 0.5px solid lightgray;
+      padding: 3px;
+
+      input {
+        border: none;
+        outline: none;
+        background: transparent;
+
+        &::placeholder {
+          font-size: 12px;
+        }
+      }
+    }
+
+    .items {
+      display: flex;
+      align-items: center;
+
+      .item {
+        display: flex;
+        align-items: center;
+        margin-right: 20px;
+        position: relative;
+
+        .icon {
+          font-size: 20px;
+        }
+
+        .avatar {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+        }
+
+        .counter {
+          width: 15px;
+          height: 15px;
+          background-color: red;
+          border-radius: 50%;
+          color: white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 10px;
+          font-weight: bold;
+          position: absolute;
+          top: -5px;
+          right: -5px;
+        }
+      }
+    }
+  }
+}
+// ------------------------------------ Table ------------------------------------
+.table {
+  .cellWrapper {
+    display: flex;
+    align-items: center;
+
+    .image {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      margin-right: 10px;
+      object-fit: cover;
+    }
+  }
+
+  .status {
+    padding: 5px;
+    border-radius: 5px;
+
+    &.Approved {
+      color: green;
+      background-color: rgba(0, 128, 0, 0.151);
+    }
+    &.Pending {
+      color: goldenrod;
+      background-color: rgba(189, 189, 3, 0.103);
+    }
+  }
+}
+// ------------------------------------ Datatable ------------------------------------
+.datatable {
+  height: 600px;
+  padding: 10px 20px 0;
+
+  .datatableTitle{
+    width: 100%;
+    font-size: 24px;
+    color: gray;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .link{
+      text-decoration: none;
+      color: green;
+      font-size: 16px;
+      font-weight: 400;
+      border: 1px solid green;
+      padding: 5px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  }
+
+  .cellWithImg {
+    display: flex;
+    align-items: center;
+
+    .cellImg {
+      //width: 32px;
+      //height: 32px;
+      //border-radius: 50%;
+      height: 85px;
+      width: 70px;
+      object-fit: cover;
+      margin-right: 20px;
+    }
+  }
+
+  .cellWithStatus {
+    padding: 5px;
+    border-radius: 5px;
+
+    &.active {
+      background-color: rgba(0, 128, 0, 0.05);
+      color: green;
+    }
+    &.pending {
+      background-color: rgba(255, 217, 0, 0.05);
+      color: goldenrod;
+    }
+    &.passive {
+      background-color: rgba(255, 0, 0, 0.05);
+      color: crimson;
+    }
+  }
+
+  .cellAction {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    .viewButton {
+      padding: 2px 5px;
+      border-radius: 5px;
+      color: darkblue;
+      border: 1px dotted rgba(0, 0, 139, 0.596);
+      cursor: pointer;
+    }
+
+    .deleteButton {
+      padding: 2px 5px;
+      border-radius: 5px;
+      color: crimson;
+      border: 1px dotted rgba(220, 20, 60, 0.6);
+      cursor: pointer;
+    }
+  }
+}
+// ------------------------------------ ListAccount ------------------------------------
+.list {
+  display: flex;
+  width: 100%;
+  .listContainer {
+    flex: 6;
+  }
+}
+// ------------------------------------ New ------------------------------------
+.new {
+  width: 100%;
+  display: flex;
+
+  .newContainer {
+    flex: 6;
+
+    .top,
+    .bottom {
+      -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+      box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+      padding: 10px;
+      margin: 20px;
+      display: flex;
+
+      h1 {
+        color: lightgray;
+        font-size: 20px;
+      }
+
+      .left {
+        flex: 1;
+        text-align: center;
+
+        img {
+          width: 80%;
+          height: 300px;
+          object-fit: fill;
+          margin-bottom: 20px;
+        }
+      }
+
+      .right {
+        flex: 2;
+
+        form {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 30px;
+          justify-content: space-around;
+
+          .formInput {
+            width: 40%;
+
+            label {
+              display: flex;
+              align-items: center;
+              gap: 10px;
+
+              .icon {
+                cursor: pointer;
+              }
+            }
+
+            input {
+              width: 100%;
+              padding: 5px;
+              border: none;
+              border-bottom: 1px solid gray;
+            }
+          }
+
+          button {
+            width: 150px;
+            padding: 10px;
+            border: none;
+            background-color: teal;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+// ------------------------------------ Detail ------------------------------------
+.single {
+  display: flex;
+  width: 100%;
+  .singleContainer {
+    flex: 6;
+
+    .top {
+      padding: 20px;
+      display: flex;
+      gap: 20px;
+
+      .left {
+        flex: 1;
+        -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+        box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+        padding: 20px;
+        position: relative;
+
+        .editButton {
+          position: absolute;
+          top: 0;
+          right: 0;
+          padding: 5px;
+          font-size: 12px;
+          color: #7451f8;
+          background-color: #7551f818;
+          cursor: pointer;
+          border-radius: 0px 0px 0px 5px;
+        }
+
+        .item {
+          display: flex;
+          gap: 20px;
+
+          .itemImg {
+            width: 80%;
+            height: 300px;
+            object-fit: fill;
+            margin-bottom: 20px;
+          }
+
+          .details {
+            .itemTitle {
+              margin-bottom: 10px;
+              color: #555;
+            }
+
+            .detailItem {
+              margin-bottom: 10px;
+              font-size: 14px;
+
+              .itemKey {
+                font-weight: bold;
+                color: gray;
+                margin-right: 5px;
+              }
+
+              .itemValue {
+                font-weight: 300;
+              }
+            }
+          }
+        }
+      }
+
+      .right {
+        flex: 2;
+      }
+    }
+
+    .bottom {
+      -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+      box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+      padding: 20px;
+      margin: 10px 20px;
+    }
+
+    .title {
+      font-size: 16px;
+      color: lightgray;
+      margin-bottom: 20px;
+    }
+  }
+}

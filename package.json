@@ -3,13 +3,37 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@createnl/grouped-checkboxes": "^1.2.0",
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
+    "@material-ui/lab": "^4.0.0-alpha.61",
+    "@mui/icons-material": "^5.8.0",
+    "@mui/lab": "^5.0.0-alpha.83",
+    "@mui/material": "^5.8.0",
+    "@mui/x-data-grid": "^5.11.1",
+    "@progress/kendo-licensing": "^1.2.2",
+    "@progress/kendo-react-excel-export": "^5.3.0",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.2.0",
     "@testing-library/user-event": "^13.5.0",
+    "axios": "^0.27.2",
+    "date-fns": "^2.28.0",
+    "js-xlsx": "^0.8.22",
     "react": "^18.1.0",
+    "react-currency-format": "^1.1.0",
     "react-dom": "^18.1.0",
+    "react-material-ui-carousel": "^3.3.3",
+    "react-responsive-carousel": "^3.2.23",
+    "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "react-slick": "^0.29.0",
+    "reactjs-popup": "^2.0.5",
+    "sacss": "^1.1.0",
+    "slick-carousel": "^1.8.1",
+    "swal": "^0.1.0",
+    "sweetalert2": "^11.4.16",
+    "web-vitals": "^2.1.4",
+    "xlsx": "^0.18.5"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -34,5 +58,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@mui/x-data-grid-pro": "^5.11.1",
+    "@mui/x-date-pickers": "^5.0.0-alpha.6"
   }
 }
