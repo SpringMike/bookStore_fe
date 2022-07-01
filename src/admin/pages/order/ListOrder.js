@@ -60,10 +60,11 @@ const ListOrder = (props) =>{
 
 
     useEffect(() => {
+        setIsLoading(false)
         setTimeout(() => {
             loadOrder().then(r => setIsLoading(true))
         }, 1000)
-    }, [])
+    }, [id])
 
 
 

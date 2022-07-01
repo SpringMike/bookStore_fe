@@ -11,7 +11,8 @@ import SettingsSystemDaydreamOutlinedIcon from "@mui/icons-material/SettingsSyst
 import PsychologyOutlinedIcon from "@mui/icons-material/PsychologyOutlined";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
 import {Link} from "react-router-dom";
-
+import PaidIcon from '@mui/icons-material/Paid';
+import ReceiptIcon from '@mui/icons-material/Receipt';
 const SideBar = () =>{
     return (
         <div className="sidebar">
@@ -41,45 +42,49 @@ const SideBar = () =>{
                             <span>Products</span>
                         </li>
                     </Link>
+                    <Link to="/admin/categories" style={{ textDecoration: "none" }}>
+                        <li>
+                            <StoreIcon className="icon" />
+                            <span>Category</span>
+                        </li>
+                    </Link>
+                    <Link to="/admin/promotions" style={{ textDecoration: "none" }}>
+                    <li>
+                        <PaidIcon className="icon" />
+                        <span>Promotions</span>
+                    </li>
+                    </Link>
+                    <Link to="/admin/transaction" style={{ textDecoration: "none" }}>
+                    <li>
+                        <ReceiptIcon className="icon" />
+                        <span>Transaction</span>
+                    </li>
+                    </Link>
+                    <p className="title">Order</p>
+                    <Link to="/admin/orders" style={{ textDecoration: "none" }}>
                     <li>
                         <CreditCardIcon className="icon" />
-                        <span>Orders</span>
+                        <span>Orders on waiting</span>
                     </li>
+                    </Link>
+                    <Link to="/admin/orders/onConfirm" style={{ textDecoration: "none" }}>
                     <li>
-                        <LocalShippingIcon className="icon" />
-                        <span>Delivery</span>
+                        <CreditCardIcon className="icon" />
+                        <span>Orders on confirm</span>
                     </li>
-                    <p className="title">USEFUL</p>
+                    </Link>
+                    <Link to="/admin/orders/onTheWay" style={{ textDecoration: "none" }}>
                     <li>
-                        <InsertChartIcon className="icon" />
-                        <span>Stats</span>
+                        <CreditCardIcon className="icon" />
+                        <span>Orders on the way</span>
                     </li>
+                    </Link>
+                    <Link to="/admin/orders/hasArrived" style={{ textDecoration: "none" }}>
                     <li>
-                        <NotificationsNoneIcon className="icon" />
-                        <span>Notifications</span>
+                        <CreditCardIcon className="icon" />
+                        <span>Orders has arrived</span>
                     </li>
-                    <p className="title">SERVICE</p>
-                    <li>
-                        <SettingsSystemDaydreamOutlinedIcon className="icon" />
-                        <span>System Health</span>
-                    </li>
-                    <li>
-                        <PsychologyOutlinedIcon className="icon" />
-                        <span>Logs</span>
-                    </li>
-                    <li>
-                        <SettingsApplicationsIcon className="icon" />
-                        <span>Settings</span>
-                    </li>
-                    <p className="title">USER</p>
-                    <li>
-                        <AccountCircleOutlinedIcon className="icon" />
-                        <span>Profile</span>
-                    </li>
-                    <li>
-                        <ExitToAppIcon className="icon" />
-                        <span>Logout</span>
-                    </li>
+                    </Link>
                 </ul>
             </div>
 

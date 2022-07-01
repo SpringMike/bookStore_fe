@@ -98,6 +98,12 @@ const CheckoutCart = () => {
                 }
             }
             setTotalPriceCart(total)
+            if (shippingCost !== 0 ){
+                setTotalPriceAfterShippingCost(total + shippingCost)
+            }
+        }else {
+            setTotalPriceCart(0)
+            setTotalPriceAfterShippingCost(0)
         }
     }
 
@@ -215,6 +221,7 @@ const CheckoutCart = () => {
                     setTimeout(()=>{
                         setIsLoading(false)
                     },1000)
+                    setTotalPriceCart(0)
                     Swal.fire(
                         'Deleted!',
                         'Your file has been deleted.',

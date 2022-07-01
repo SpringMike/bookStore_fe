@@ -235,7 +235,7 @@ const Details = () => {
                                     book.sale !== null ? (
                                         <div className="thumbDiscountLabel">
                                             <Typography variant="txtDiscount">
-                                                {book.sale}%
+                                                -{book.sale}%
                                             </Typography>
                                         </div>
                                     ) : <></>

@@ -68,11 +68,11 @@ function App() {
                         </Route>
                         <Route path="orders">
                             <Route index element={<ListOrder id={1} nextIdOrder={2} title={"On Waiting"}/>}/>
-                            <Route path="onConfirm" index
+                            <Route path="onConfirm"
                                    element={<ListOrder id={2} nextIdOrder={3} title={"On Confirm"}/>}/>
-                            <Route path="onTheWay" index
+                            <Route path="onTheWay"
                                    element={<ListOrder id={3} nextIdOrder={4} title={"On the way"}/>}/>
-                            <Route path="hasArrived" index
+                            <Route path="hasArrived"
                                    element={<ListOrder id={4} nextIdOrder={0} title={"Has arrived"}/>}/>
                         </Route>
                         <Route path="promotions">

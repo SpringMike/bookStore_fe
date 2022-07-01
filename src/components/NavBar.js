@@ -4,8 +4,12 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import SearchIcon from '@mui/icons-material/Search';
 import Typography from '@mui/material/Typography';
-import Link from '@mui/material/Link';
 
+import Auth from "../security/Auth";
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import StoreIcon from "@mui/icons-material/Store";
+import Link2 from "@mui/material/Link";
+import {Link} from "react-router-dom";
 const NavBar =() =>{
 
     const sections = [
@@ -35,12 +39,23 @@ const NavBar =() =>{
                 >
                     Ebook
                 </Typography>
-                <IconButton>
-                    <SearchIcon />
-                </IconButton>
-                <Button variant="outlined" size="small">
-                    Sign up
-                </Button>
+                {
+                    Auth.getCurrentUser() === null ? (
+                        <>
+                            <IconButton>
+                                <SearchIcon />
+                            </IconButton>
+                            <Button variant="outlined" size="small">
+                                Sign up
+                            </Button>
+                        </>
+                    ) :(
+                        <Link to="/checkout-cart" style={{ textDecoration: "none",display:'flex',color:'blue' }}>
+                                <ShoppingCartIcon className="icon" />
+                                <span>Your cart</span>
+                        </Link>
+                    )
+                }
             </Toolbar>
             <Toolbar
                 component="nav"
@@ -48,7 +63,7 @@ const NavBar =() =>{
                 sx={{ justifyContent: 'space-between', overflowX: 'auto' }}
             >
                 {sections.map((section) => (
-                    <Link
+                    <Link2
                         color="inherit"
                         noWrap
                         key={section.title}
@@ -57,7 +72,7 @@ const NavBar =() =>{
                         sx={{ p: 1, flexShrink: 0 }}
                     >
                         {section.title}
-                    </Link>
+                    </Link2>
                 ))}
             </Toolbar>
         </React.Fragment>
